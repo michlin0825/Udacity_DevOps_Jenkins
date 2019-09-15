@@ -13,7 +13,7 @@ pipeline {
     stage('Upload to AWS') {
       steps {
         withAWS(region:'ap-northeast-1',credentials:'aws-static') {
-          s3Upload(pathStyleAccessEnabled:true, payloadSigningEnabled: true, file:'index.html', bucket:'udacity-michlin0825-pipeline', path:'index.html')
+          s3Upload(pathStyleAccessEnabled:true, payloadSigningEnabled: true, file:'index.html', bucket:'udacity-michlin0825-jenkins', path:'index.html')
         }
       } 
     }
